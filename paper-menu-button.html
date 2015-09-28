@@ -306,7 +306,9 @@ Custom property | Description | Default
           return;
         }
 
-        this.$.dropdown.open();
+        this.async (function() {
+          this.$.dropdown.open();
+        },10);
       },
 
       /**
